@@ -7,5 +7,4 @@ okta-oidc-tck
 samples-nodejs-express-4
 .DS_Store
 .vscode
-.samples.config.js
 testenv

@@ -35,7 +35,7 @@ export default {
          */
         baseUrl: sampleConfig.oidc.issuer.split('/oauth2')[0],
         clientId: sampleConfig.oidc.clientId,
-        redirectUri: sampleConfig.oidc.redirectUri,
+        redirectUri: window.location.origin + '/implicit/callback', // sampleConfig.oidc.redirectUri,
         logo: require('@/assets/logo.png'),
         i18n: {
           en: {
@@ -47,7 +47,10 @@ export default {
           issuer: sampleConfig.oidc.issuer,
           display: 'page',
           scopes: sampleConfig.oidc.scope.split(' ')
-        }
+        },
+        idps: [{type: 'GOOGLE', id: '0oa15ya5q0jHQSkbQ357'}  //enzyme uses 0oah2b0rnmiVP5gHZ0h7
+        ],
+        idpDisplay: 'PRIMARY'
       })
 
       this.widget.renderEl(
